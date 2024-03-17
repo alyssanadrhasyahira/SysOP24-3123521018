@@ -61,6 +61,8 @@ https://github.com/ferryastika/flops-iops
 $ make
 ```
 ![image](https://github.com/alyssanadrhasyahira/SysOP24-3123521018/assets/160555565/9f0182ab-9b4d-4a48-8da5-41ba28bf9c10)
+ 
+Analisa $ make Perintah ini digunakan untuk mengompilasi program dari kode sumber. 
 
 ## Cleaning Old Build
 
@@ -69,6 +71,8 @@ $ make clean
 ```
 ![image](https://github.com/alyssanadrhasyahira/SysOP24-3123521018/assets/160555565/ef904eec-16cd-4c1b-8d52-a347c14e5059)
 
+Analisa : $ make clean Perintah ini digunakan untuk membersihkan file sementara dan objek yang dihasilkan oleh perintah make.
+
 ## Install Binaries 
 
 ```sh
@@ -76,12 +80,16 @@ $ sudo make install
 ```
 ![image](https://github.com/alyssanadrhasyahira/SysOP24-3123521018/assets/160555565/d93f46a2-02ea-450c-9725-f8e03ea26bf5)
 
+Analisa : $ sudo make install Perintah ini digunakan untuk menginstal program yang telah dikompilasi ke dalam sistem. 
+
 ## Uninstall Binaries 
 
 ```sh
 $ sudo make uninstall
 ```
 ![image](https://github.com/alyssanadrhasyahira/SysOP24-3123521018/assets/160555565/7f182e70-5ee7-4760-b991-eb5463732004)
+
+Analisa : $ sudo make uninstall: Perintah ini digunakan untuk menghapus program yang telah diinstal menggunakan make install. 
 
 
 ## Usage
