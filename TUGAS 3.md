@@ -152,6 +152,9 @@ Analisa : $ sudo make uninstall: Perintah ini digunakan untuk menghapus program 
 
 Analisis : IOPS digunakan untuk mengukur jumlah operasi masuk/keluar yang dapat dilakukan oleh sistem dalam satu detik. hasil dari setiap eksekusi yang dilakukan berbeda-beda hal ini dikarenkan perhitungan sistem dilakukan dalam hitungan detik saja dan hasil perhitungannya dipengaruhi oleh beberapa faktor yaitu jenis dan kecepatan media penyimpanan, sistem file, tingkat kerja (workload), dan arsitektur sistem. sedangkan FLOPS digunakan untuk mengukur jumlah operasi titik mengambang yang dapat dilakukan oleh sistem dalam satu detik. hasil dari setiap eksekusi yang dilakukan berbeda-beda hal ini dikarenkan perhitungan yang dilakukan sistem dilakukan dalam hitungan detik saja dan hasil perhitungannya dipengaruhi beberapa faktor yaitu arsitektur CPU, GPU, atau accelerator yang digunakan, serta algoritma yang diterapkan.
 
+PERBANDINGAN EKSEKUSI 
+https://docs.google.com/spreadsheets/d/1CVZH3rk8T0rY-0BirmPdzeeieXzrKRjIVq6fb6Yu5GQ/edit#gid=0
+
 
 **JAWABAN NOMOR 4**
 
