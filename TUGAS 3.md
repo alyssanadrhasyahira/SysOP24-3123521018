@@ -42,7 +42,28 @@ dapat diartikan sebagai berikut:
 * Instruksi didekode dan proses dilanjutkan sesuai instruksi.
 * Proses berlanjut hingga program selesai dieksekusi.
 
+## Peran Bahasa Pemrograman
+Bahasa pemrograman adalah suatu tools yang membantu programmer menulis serangkaian instruksi untuk dilakukan komputer dalam mengerjakan task tertentu.Fungsi bahasa dalam kehidupan manusia sehari-hari adalah sebagai alat komunikasi yang bisa dipahami. Begitu juga dengan bahasa pemrograman. Ini berfungsi sebagai penghubung komunikasi antara komputer dan manusia (programmer).
 
+## Peran compiler
+Compiler adalah software khusus untuk menerjemahkan bahasa pemrograman tingkat tinggi (kode sumber) menjadi kode mesin yang bisa dipahami dan dijalankan oleh komputer. Compiler memainkan peran penting dalam proses pengembangan software karena membantu mengetahui jika ada kesalahan sintaksis dan semantik dalam kode sebelum akhirnya programmer menjalankan kode tersebut. Adanya compiler bisa menghemat waktu, mencegah terjadinya crash, sampai akhirnya menghasilkan program yang lebih cepat dan ringkas.
+
+
+## Peran Sistem Oprasi
+1. Mengelola sumber daya terkait dengan pengendalian perangkat lunak
+sistem/perangkat lunak aplikasi yang sedang dijalankan. Sebagai contoh
+komponen perangkat keras pada komputer yaitu CPU, memori utama, alat
+input/output.
+
+2. Mempersiapkan agar program aplikasi dapat berinteraksi dengan
+perangkat keras secara konsisten dan stabil tanpa harus mengetahui secara
+detil perangkat keras.
+
+3. melakukan pengelolaan proses mencakup penyiapan, penjadwalan, dan
+pemantauan proses program yang sedang dijalankan.
+
+4. melakukan pengelolaan data pengendalian terhadap data
+masukan/keluaran
 
 
 
