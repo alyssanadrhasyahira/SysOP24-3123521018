@@ -1,12 +1,59 @@
-JAWABAN NOMOR 1
+**JAWABAN NOMOR 1**
+## pengertian
+siklus CPU (fetch,decode,execute) cycle adalah proses berulang yang dilakukan oleh CPU untuk mengeksekusi instruksi dalam sebuah program. Setiap siklus melibatkan tiga tahap utama: Fetch, Decode, dan Execute.
+
+## Tahap-tahap proses
+Fetch:
+* CPU mengambil instruksi program dari memori utama.
+* Instruksi ini diambil berdasarkan alamat yang disimpan di Program Counter (PC).
+
+Decode:
+* CPU mendekode instruksi yang telah diambil untuk mengetahui operasi apa yang harus dilakukan.
+* Instruksi dipecah menjadi operasi yang lebih kecil yang dapat dipahami oleh CPU.
+
+Execute:
+* CPU menjalankan instruksi yang telah didekode.
+* Operasi-operasi matematika atau logika dilakukan sesuai dengan instruksi.
+
+## Contoh penggunaan 
+perintah dalam bahasa assembly sebagai berikut:
+
+LOAD [10]
+
+ADD [11]
+
+STORE [12]
+
+dapat diartikan sebagai berikut:
+
+1. LOAD: Ambil instruksi dari memori 10 ke akumulator.
+
+2. ADD: Tambahkan isi dari memori 11 dengan nilai yang ada di akumulator.
+
+3. STORE: Simpan hasil penjumlahan yang ada di akumulator ke memori 12
+
+## ilustrasi dalam CPU
+* CPU terdiri dari Control Unit, Accumulator, dan Arithmetic Logic Unit (ALU).
+* Register lain seperti Program Counter (PC), Current Instruction Register (CIR), Memory Address Register (MAR), dan Memory Data Register (MDR) juga ada.
+
+## langkah-langkah dalam CPU
+* Program Counter menyimpan alamat instruksi selanjutnya.
+* Alamat memori disimpan di MAR, isi dari alamat memori dimuat di MDR, dan instruksi disimpan di CIR. Program Counter bertambah 1.
+* Instruksi didekode dan proses dilanjutkan sesuai instruksi.
+* Proses berlanjut hingga program selesai dieksekusi.
 
 
-JAWABAN NOMOR 3
+
+
+
+
+**JAWABAN NOMOR 3**
 
 
 ## Melakukan clone 
 https://github.com/ferryastika/flops-iops 
- <img width="408" alt="Screenshot 2024-03-17 104618" src="https://github.com/alyssanadrhasyahira/SysOP24-3123521018/assets/160555565/e66bb465-4311-439e-a263-c3b8a6b1dbaa">
+
+<img width="408" alt="Screenshot 2024-03-17 104618" src="https://github.com/alyssanadrhasyahira/SysOP24-3123521018/assets/160555565/e66bb465-4311-439e-a263-c3b8a6b1dbaa">
 
 ## Build Binaries
 
@@ -96,7 +143,7 @@ $ sudo make uninstall
 <img width="369" alt="Screenshot 2024-03-17 141047" src="https://github.com/alyssanadrhasyahira/SysOP24-3123521018/assets/160555565/91f7c473-5167-41f3-85f9-a630509c6e7a">
 
 
-JAWABAN NOMOR 4
+**JAWABAN NOMOR 4**
 
 ```sh
   $ su -l
