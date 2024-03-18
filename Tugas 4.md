@@ -70,6 +70,8 @@ $ mkdir berfungsi untuk membuat folder baru, pada percobaan ini folder dinamakan
     $ cat 1> myfile.txt
     Ini adalah teks yang saya simpan ke file myfile.txt
    ```
+   <img width="313" alt="Screenshot 2024-03-18 115955" src="https://github.com/alyssanadrhasyahira/SysOP24-3123521018/assets/160555565/149427ca-7cd3-4bd4-badc-dd948f88fff1">
+
 Analisa	:
 $ cat 1> myfile.txt berfungsi untuk membuat sebuah file, perintah. File akan tersimpan dengan nama myfile.txt 
 
@@ -78,6 +80,8 @@ $ cat 1> myfile.txt berfungsi untuk membuat sebuah file, perintah. File akan ter
     $ cat 0< myfile.txt
     $ cat myfile.txt
    ```
+<img width="271" alt="Screenshot 2024-03-18 120105" src="https://github.com/alyssanadrhasyahira/SysOP24-3123521018/assets/160555565/61d024f0-d88c-404d-b841-fd5e5f83e619">
+
 Analisa	:
 •	$ cat 0< myfile.txt berfungsi untuk melihat atau menampilkan isi file
 •	$ cat myfile.txt Berfungsi menampilkan isi file
