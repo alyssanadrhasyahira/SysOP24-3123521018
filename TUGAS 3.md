@@ -175,7 +175,12 @@ Analisis : IOPS digunakan untuk mengukur jumlah operasi masuk/keluar yang dapat 
 
 PERBANDINGAN EKSEKUSI DENGAN TEMAN
 
-https://docs.google.com/spreadsheets/d/1CVZH3rk8T0rY-0BirmPdzeeieXzrKRjIVq6fb6Yu5GQ/edit#gid=0
+<img width="565" alt="Screenshot 2024-03-18 084806" src="https://github.com/alyssanadrhasyahira/SysOP24-3123521018/assets/160555565/59bf49a4-aec1-4617-9290-f59fb41115d3">
+
+Analisa :
+Dari plot perbandingan di atas, dapat dilihat bahwa Alyssa memiliki nilai rata-rata IOPS dan FLOPS yang lebih tinggi dibandingkan dengan Dyzka, Pelangi, dan Feby. Hal ini menunjukkan bahwa PC Alyssa cenderung memiliki performa yang lebih baik dalam menangani operasi input/output (IOPS) dan operasi floating point (FLOPS).
+
+Kesimpulan yang bisa diambil adalah performa komputer dalam hal IOPS dan FLOPS sangat penting tergantung pada kebutuhan aplikasi atau tugas yang dijalankan. Semakin tinggi nilai IOPS dan FLOPS, semakin baik kemampuan komputer tersebut dalam menangani tugas-tugas yang memerlukan operasi input/output dan operasi floating point secara cepat dan efisien.
 
 
 **JAWABAN NOMOR 4**
