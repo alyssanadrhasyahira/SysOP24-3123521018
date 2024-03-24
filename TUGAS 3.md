@@ -29,6 +29,20 @@ ADD [11]
 
 STORE [12]
 
+LOAD  X
+
+ADD   Y
+
+STORE Z
+
+Assembled object code
+
+100110      0000001010
+
+110011      0000001011
+
+111010      0000001100
+
 dapat diartikan sebagai berikut:
 
 1. LOAD: Ambil instruksi dari memori 10 ke akumulator.
