@@ -15,8 +15,13 @@ Execute:
 * CPU menjalankan instruksi yang telah didekode.
 * Operasi-operasi matematika atau logika dilakukan sesuai dengan instruksi.
 
-## Contoh penggunaan 
-perintah dalam bahasa assembly sebagai berikut:
+## Contoh fetch decode execute cycle ketika bekerja
+
+Diberikan High level language source code yaitu
+
+Z = X+Y
+
+Untuk bahasa assemblynya bisa ditulis sebagai berikut
 
 LOAD [10]
 
@@ -33,14 +38,88 @@ dapat diartikan sebagai berikut:
 3. STORE: Simpan hasil penjumlahan yang ada di akumulator ke memori 12
 
 ## ilustrasi dalam CPU
+
+<img width="387" alt="Screenshot 2024-03-24 110208" src="https://github.com/alyssanadrhasyahira/SysOP24-3123521018/assets/160555565/ea2323cd-f6ba-42fc-8a7b-e3b3b6e35a27">
+
 * CPU terdiri dari Control Unit, Accumulator, dan Arithmetic Logic Unit (ALU).
 * Register lain seperti Program Counter (PC), Current Instruction Register (CIR), Memory Address Register (MAR), dan Memory Data Register (MDR) juga ada.
 
 ## langkah-langkah dalam CPU
+
+<img width="419" alt="Screenshot 2024-03-24 110838" src="https://github.com/alyssanadrhasyahira/SysOP24-3123521018/assets/160555565/f13dfeb8-2460-4597-9d25-d14b6fd7bb12">
+
 * Program Counter menyimpan alamat instruksi selanjutnya.
+  
+<img width="414" alt="Screenshot 2024-03-24 110936" src="https://github.com/alyssanadrhasyahira/SysOP24-3123521018/assets/160555565/cfc7829d-d34e-4ede-98f3-ed723f54f258">
+
 * Alamat memori disimpan di MAR, isi dari alamat memori dimuat di MDR, dan instruksi disimpan di CIR. Program Counter bertambah 1.
-* Instruksi didekode dan proses dilanjutkan sesuai instruksi.
-* Proses berlanjut hingga program selesai dieksekusi.
+
+  <img width="391" alt="Screenshot 2024-03-24 111113" src="https://github.com/alyssanadrhasyahira/SysOP24-3123521018/assets/160555565/74389f3b-70d6-4a4b-937b-84ac6ab37250">
+
+fetch instruksi pertama dapat dilakukan 
+
+<img width="463" alt="Screenshot 2024-03-24 111329" src="https://github.com/alyssanadrhasyahira/SysOP24-3123521018/assets/160555565/b316613d-5674-43ba-80fc-f8370a11f335">
+
+1. Sekarang dapat melakukan decode kode instruksi, Masukan instruksi tersebut ke Control Unit
+2. Setelah insturksi LOAD 10 dieksekusi maka selanjutnya CPU akan
+melakukan fetch memori 10, Jadi Memory Address Register nya berubah menjadi 10
+3. Lalu ambil isi dari memori 10 dan simpan di Memory Data Register
+4. lalu dari MDR akan disimpan juga di Akumulator. 
+
+Setelah instruksi pertama dilakukan maka selanjutnya adalah fetch
+instruksi ke dua.
+
+<img width="444" alt="Screenshot 2024-03-24 112000" src="https://github.com/alyssanadrhasyahira/SysOP24-3123521018/assets/160555565/359bbd07-7d9b-47b5-bbe0-57db5f3999e8">
+
+<img width="464" alt="Screenshot 2024-03-24 112011" src="https://github.com/alyssanadrhasyahira/SysOP24-3123521018/assets/160555565/27696f6a-7203-4e6d-97fe-3ec882df4307">
+
+
+
+
+1. Program Counter sudah menunjukkan alamat memori yang baru, sehingga langkah berikutnya adalah menyalin alamat memori tersebut ke Memory Address Register
+2. Kemudian, konten dari alamat memori 101 diambil dan disimpan ke dalam Memory Data Register.
+3. Instruksi yang terdapat di alamat memori 101 juga disimpan di Current Instruction Register
+4. Setelah itu, Program Counter akan bertambah 1 untuk menunjukkan instruksi selanjutnya.
+
+<img width="457" alt="Screenshot 2024-03-24 112515" src="https://github.com/alyssanadrhasyahira/SysOP24-3123521018/assets/160555565/b6c87df1-5f44-47be-bef1-c7dbe81a1b1e">
+
+<img width="453" alt="Screenshot 2024-03-24 112555" src="https://github.com/alyssanadrhasyahira/SysOP24-3123521018/assets/160555565/2fc1fd0d-4b25-41be-8ce6-74f752222c67">
+
+1. Lakukan decode instruksi kedua dengan cara yang sama seperti instruksi pertama dengan diteruskan ke Control unit.
+2. Setelah Control memahami bahwa instruksi ini adalah operasi add, maka instruksi add diteruskan ke Unit Logika Aritmetika (ALU).
+3. Salin isi Akumulator ke ALU.
+4. Salin alamat memori 11 ke Register Alamat Memori (MAR) karena akan mengambil data dari alamat tersebut.
+5. Salin isi dari alamat memori 11 ke Register Data Memori (MDR).
+6. Transfer data dari MDR ke Akumulator.
+7. ALU akan menambahkan angka 3 dengan 2.
+8. dan menampilan kembali hasilnya ke Akumulator sehingga bisa menjaga total running itu.
+
+Setelah instruksi kedua dilakukan maka selanjutnya adalah fetch
+instruksi ke tiga.
+
+<img width="442" alt="Screenshot 2024-03-24 114648" src="https://github.com/alyssanadrhasyahira/SysOP24-3123521018/assets/160555565/c68a9de9-c03d-4249-a475-c21b90487c90">
+
+<img width="463" alt="Screenshot 2024-03-24 114659" src="https://github.com/alyssanadrhasyahira/SysOP24-3123521018/assets/160555565/388f3e19-799a-4750-967f-c6bf08c9bcfa">
+
+1. lokasi memori 102 di salin ke Memory Address Register.
+2. Isi dari alamat memori 102 disalin ke Memory Data
+3. Instruksi tersebut dipindahkan ke Current Instruction Register
+4. selanjutnya Program Counter akan ditambah 1 menjadi 103, disini biasanya akan ada instruksi halt atau stop diakhir program.
+
+<img width="465" alt="Screenshot 2024-03-24 115519" src="https://github.com/alyssanadrhasyahira/SysOP24-3123521018/assets/160555565/3658a04b-c34e-455b-8437-74036fbdda88">
+
+1. decode instruksi ketiga, dengan simpan instruksi tersebut kedalam Control
+Unit.
+2. Karena disini instruksinya adalah untuk STORE atau menyimpan hasil ke alamat memori 12 maka simpan lokasi 12 ke Memory Address Register
+3. Lalu hasil dari Akumulator dipindahkan ke Memory Data Register
+4. dan dari Memory Data Register
+akan dilanjutkan ke lokasi memori 12. Begitu lah program ini terselesaikan
+
+
+
+
+
+
 
 ## Peran Bahasa Pemrograman
 Bahasa pemrograman adalah suatu tools yang membantu programmer menulis serangkaian instruksi untuk dilakukan komputer dalam mengerjakan task tertentu.Fungsi bahasa dalam kehidupan manusia sehari-hari adalah sebagai alat komunikasi yang bisa dipahami. Begitu juga dengan bahasa pemrograman. Ini berfungsi sebagai penghubung komunikasi antara komputer dan manusia (programmer).
