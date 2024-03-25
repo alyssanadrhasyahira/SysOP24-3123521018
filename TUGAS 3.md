@@ -53,26 +53,29 @@ dapat diartikan sebagai berikut:
 
 ## ilustrasi dalam CPU
 
-<img width="387" alt="Screenshot 2024-03-24 110208" src="https://github.com/alyssanadrhasyahira/SysOP24-3123521018/assets/160555565/ea2323cd-f6ba-42fc-8a7b-e3b3b6e35a27">
+![Diagram Tanpa Judul (6)](https://github.com/alyssanadrhasyahira/SysOP24-3123521018/assets/160555565/f0fe8c09-3043-4a69-88b2-ed9fb195eb8a)
+
 
 * CPU terdiri dari Control Unit, Accumulator, dan Arithmetic Logic Unit (ALU).
 * Register lain seperti Program Counter (PC), Current Instruction Register (CIR), Memory Address Register (MAR), dan Memory Data Register (MDR) juga ada.
 
 ## langkah-langkah dalam CPU
 
-<img width="419" alt="Screenshot 2024-03-24 110838" src="https://github.com/alyssanadrhasyahira/SysOP24-3123521018/assets/160555565/f13dfeb8-2460-4597-9d25-d14b6fd7bb12">
+![Diagram Tanpa Judul (7)](https://github.com/alyssanadrhasyahira/SysOP24-3123521018/assets/160555565/4149ff67-b449-4272-96f3-385c980c7f0c)
 
-* Program Counter menyimpan alamat instruksi selanjutnya.
+
+* Program Counter menyimpan alamat untuk instruksI.
   
-<img width="414" alt="Screenshot 2024-03-24 110936" src="https://github.com/alyssanadrhasyahira/SysOP24-3123521018/assets/160555565/cfc7829d-d34e-4ede-98f3-ed723f54f258">
+![Diagram Tanpa Judul (8)](https://github.com/alyssanadrhasyahira/SysOP24-3123521018/assets/160555565/ce8667d0-5127-4454-a976-56d0df33c95c)
+
 
 * Alamat memori disimpan di MAR, isi dari alamat memori dimuat di MDR, dan instruksi disimpan di CIR. Program Counter bertambah 1.
 
-  <img width="391" alt="Screenshot 2024-03-24 111113" src="https://github.com/alyssanadrhasyahira/SysOP24-3123521018/assets/160555565/74389f3b-70d6-4a4b-937b-84ac6ab37250">
+ ![Diagram Tanpa Judul (9)](https://github.com/alyssanadrhasyahira/SysOP24-3123521018/assets/160555565/2af87eb7-4248-44cf-9700-ba064f3ad681)
 
-fetch instruksi pertama dapat dilakukan 
+fetch instruksi pertama dilakukan 
 
-<img width="463" alt="Screenshot 2024-03-24 111329" src="https://github.com/alyssanadrhasyahira/SysOP24-3123521018/assets/160555565/b316613d-5674-43ba-80fc-f8370a11f335">
+![KE 1](https://github.com/alyssanadrhasyahira/SysOP24-3123521018/assets/160555565/7d802cea-08d5-45ef-9252-7a13d4d62bc0)
 
 1. Sekarang dapat melakukan decode kode instruksi, Masukan instruksi tersebut ke Control Unit
 2. Setelah insturksi LOAD 10 dieksekusi maka selanjutnya CPU akan
@@ -83,11 +86,7 @@ melakukan fetch memori 10, Jadi Memory Address Register nya berubah menjadi 10
 Setelah instruksi pertama dilakukan maka selanjutnya adalah fetch
 instruksi ke dua.
 
-<img width="444" alt="Screenshot 2024-03-24 112000" src="https://github.com/alyssanadrhasyahira/SysOP24-3123521018/assets/160555565/359bbd07-7d9b-47b5-bbe0-57db5f3999e8">
-
-<img width="464" alt="Screenshot 2024-03-24 112011" src="https://github.com/alyssanadrhasyahira/SysOP24-3123521018/assets/160555565/27696f6a-7203-4e6d-97fe-3ec882df4307">
-
-
+![KE 2](https://github.com/alyssanadrhasyahira/SysOP24-3123521018/assets/160555565/0af9bd1c-b5a6-481e-baa1-70f6216afcca)
 
 
 1. Program Counter sudah menunjukkan alamat memori yang baru, sehingga langkah berikutnya adalah menyalin alamat memori tersebut ke Memory Address Register
@@ -95,9 +94,8 @@ instruksi ke dua.
 3. Instruksi yang terdapat di alamat memori 101 juga disimpan di Current Instruction Register
 4. Setelah itu, Program Counter akan bertambah 1 untuk menunjukkan instruksi selanjutnya.
 
-<img width="457" alt="Screenshot 2024-03-24 112515" src="https://github.com/alyssanadrhasyahira/SysOP24-3123521018/assets/160555565/b6c87df1-5f44-47be-bef1-c7dbe81a1b1e">
+![KE 3](https://github.com/alyssanadrhasyahira/SysOP24-3123521018/assets/160555565/e237162c-e8d0-48e0-b722-06669ede2fa3)
 
-<img width="453" alt="Screenshot 2024-03-24 112555" src="https://github.com/alyssanadrhasyahira/SysOP24-3123521018/assets/160555565/2fc1fd0d-4b25-41be-8ce6-74f752222c67">
 
 1. Lakukan decode instruksi kedua dengan cara yang sama seperti instruksi pertama dengan diteruskan ke Control unit.
 2. Setelah Control memahami bahwa instruksi ini adalah operasi add, maka instruksi add diteruskan ke Unit Logika Aritmetika (ALU).
@@ -111,16 +109,16 @@ instruksi ke dua.
 Setelah instruksi kedua dilakukan maka selanjutnya adalah fetch
 instruksi ke tiga.
 
-<img width="442" alt="Screenshot 2024-03-24 114648" src="https://github.com/alyssanadrhasyahira/SysOP24-3123521018/assets/160555565/c68a9de9-c03d-4249-a475-c21b90487c90">
+![KE 4](https://github.com/alyssanadrhasyahira/SysOP24-3123521018/assets/160555565/d967bc47-978c-4519-a8e2-9486d2504f27)
 
-<img width="463" alt="Screenshot 2024-03-24 114659" src="https://github.com/alyssanadrhasyahira/SysOP24-3123521018/assets/160555565/388f3e19-799a-4750-967f-c6bf08c9bcfa">
 
 1. lokasi memori 102 di salin ke Memory Address Register.
 2. Isi dari alamat memori 102 disalin ke Memory Data
 3. Instruksi tersebut dipindahkan ke Current Instruction Register
 4. selanjutnya Program Counter akan ditambah 1 menjadi 103, disini biasanya akan ada instruksi halt atau stop diakhir program.
 
-<img width="465" alt="Screenshot 2024-03-24 115519" src="https://github.com/alyssanadrhasyahira/SysOP24-3123521018/assets/160555565/3658a04b-c34e-455b-8437-74036fbdda88">
+<![KE 5](https://github.com/alyssanadrhasyahira/SysOP24-3123521018/assets/160555565/5408dd4b-b68a-451e-9260-839f7165ffda)
+
 
 1. decode instruksi ketiga, dengan simpan instruksi tersebut kedalam Control
 Unit.
