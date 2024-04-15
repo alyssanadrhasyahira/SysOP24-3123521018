@@ -1,6 +1,6 @@
 Perbedaa Swapping Dan Paging
 
-* Swapping
+* Swapping 
   
   Swapping merupakan Sebuah proses agar bisa dieksekusi bukan hanya membutuhkan sumber daya dari CPU, tetapi juga harus terletak dalam memori. Dalam tahapannya, suatu proses bisa saja ditukar sementara keluar memori ke sebuah penyimpanan sementara dankemudian dibawa lagi ke memori untuk melanjutkan pengeksekusian. Hal ini dalamsistem operasi disebut swapping
 
