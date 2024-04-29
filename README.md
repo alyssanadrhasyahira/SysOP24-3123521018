@@ -32,14 +32,15 @@ Instruksi-instruksi pada arsitektur CISC dapat melibatkan beberapa operasi yang 
 
 ## FORK ORPHAN dan ZOMBIE
 
--clone ke repository https://github.com/ferryastika/operatingsystem.git
+- clone ke repository https://github.com/ferryastika/operatingsystem.git
 
  ```
-    $ su root
-    $ sudo apt update
-    $ sudo apt upgrade
-    $ sudo apt install g++
+    $ git clone  https://github.com/ferryastika/operatingsystem.git
  ```
+
+  
+![image](https://github.com/alyssanadrhasyahira/SysOP24-3123521018/assets/160555565/5020504c-e560-4927-bad6-71bedaca9e5d)
+
 
 
 - Melakukan instalasi g++ sebelum menjalan fork, orphan dan zombie.
@@ -61,16 +62,25 @@ l![image](https://github.com/alyssanadrhasyahira/SysOP24-3123521018/assets/16055
  ```
 ![image](https://github.com/alyssanadrhasyahira/SysOP24-3123521018/assets/160555565/6e63a294-1876-4e98-b936-32f610ec6364)
 
+- Masuk ke cd operatingsystem
+  
+ ```
+   $ cd operatingsystem
+ ```
+![image](https://github.com/alyssanadrhasyahira/SysOP24-3123521018/assets/160555565/6454ae23-b11a-459c-9e7c-5f519aaa457e)
   
 > fork01.ccp
 
-- Masuk ke compiler
+- Masuk ke compailer
   
  ```
    $ nano [namafile].cpp
  ```
 
-- memasukkan kode fork.1
+![image](https://github.com/alyssanadrhasyahira/SysOP24-3123521018/assets/160555565/fedf2a5b-413f-4ba7-a666-51454db6d8f7)
+
+
+- memasukkan kode fork01.cpp
   
  ```
    using namespace std;
@@ -102,27 +112,42 @@ return 0;
 }
  ```
 
+![image](https://github.com/alyssanadrhasyahira/SysOP24-3123521018/assets/160555565/17f2ea71-123f-4fb2-ac68-9ea843669864)
+
 - kemudian simpan file dengan crlt + x
+
 - mengubah file.cpp menjadi .exe
 
 ```
    $ g++ [namafile].cpp -o [namafile].exe
  ```
+![image](https://github.com/alyssanadrhasyahira/SysOP24-3123521018/assets/160555565/345612fd-e454-4ba8-b870-9d6a426bbb00)
+
 
 - kemudian menjalankan kode
   
 ```
 $ ./[namafile].exe
  ```
+![image](https://github.com/alyssanadrhasyahira/SysOP24-3123521018/assets/160555565/5ff0cbe1-f88e-4ec5-af2d-1e44bf4592bb)
 
-> fork 2
+- Hasil
+![image](https://github.com/alyssanadrhasyahira/SysOP24-3123521018/assets/160555565/b4e57378-6c6a-4493-94cc-60f43e1344a8)
+
+  
+
+
+> fork02.cpp
 - Masuk ke compiler
   
  ```
    $ nano [namafile].cpp
  ```
 
-- memasukkan kode fork.2
+![image](https://github.com/alyssanadrhasyahira/SysOP24-3123521018/assets/160555565/6c57a340-c4fb-46fb-82af-bb8613ebabc6)
+
+
+- memasukkan kode fork02.cpp
   
  ```
  #include <iostream>
@@ -150,6 +175,8 @@ int main(void) {
 	return 0;
 }
  ```
+![image](https://github.com/alyssanadrhasyahira/SysOP24-3123521018/assets/160555565/f9ecc84e-4e9f-4c95-a48d-2cbc19119c77)
+
 
 - kemudian simpan file dengan crlt + x
 - mengubah file.cpp menjadi .exe
@@ -164,13 +191,69 @@ int main(void) {
 $ ./[namafile].exe
  ```
 
+![image](https://github.com/alyssanadrhasyahira/SysOP24-3123521018/assets/160555565/4a598364-e0df-4543-946b-7c3fd35a395e)
+
+
 - untuk menghentikan proses tekan ctrl + c
+
+  > fork03.cpp
+- Masuk ke compiler
+  
+ ```
+   $ nano [namafile].cpp
+ ```
+
+- memasukkan kode fork03.cpp
+  
+ ```
+#include <iostream>
+using namespace std;
+#include <sys/types.h>
+#include <unistd.h>
+
+
+/* getpid() dan fork() adalah system call yg dideklarasikan
+pada unistd.h.
+Menghasilkan suatu nilai dengan type pid_t.
+pid_t adalah type khusus untuk process id yg ekuivalen dg int
+*/
+int main(void) {
+	pid_t childpid;
+	childpid = fork();
+	for (int i = 0; i < 5; i++) {
+		cout << "This is process " << getpid() << endl;
+		sleep(2);
+	}
+	return 0;
+}
+ ```
+
+![image](https://github.com/alyssanadrhasyahira/SysOP24-3123521018/assets/160555565/810acf5b-6c39-421e-8c01-4de755ed9ed6)
+
+- kemudian simpan file dengan crlt + x
+- mengubah file.cpp menjadi .exe
+
+```
+   $ g++ [namafile].cpp -o [namafile].exe
+ ```
+
+- kemudian menjalankan kode
+  
+```
+$ ./[namafile].exe
+ ```
+![image](https://github.com/alyssanadrhasyahira/SysOP24-3123521018/assets/160555565/6a618897-df13-4549-9e2d-ae8f1fc4749f)
+
+
+
+
+
 
 > Orphan
 - Masuk ke compiler
   
  ```
-   $ nano [namafile].cpp
+   $ nano [namafile].c
  ```
 
 - memasukkan kode Orphan
@@ -220,7 +303,11 @@ int main()
 /* https://www.includehelp.com/c-programs/orphan-process.aspx */
  ```
 
+![image](https://github.com/alyssanadrhasyahira/SysOP24-3123521018/assets/160555565/f9582508-7421-4776-816e-e0e0a262ae01)
+
+
 - kemudian simpan file dengan crlt + x
+
 - mengubah file.cpp menjadi .exe
 
 ```
@@ -232,6 +319,8 @@ int main()
 ```
 $ ./[namafile].exe
  ```
+
+![image](https://github.com/alyssanadrhasyahira/SysOP24-3123521018/assets/160555565/ce1da593-917c-4c91-bbfc-2d7eab471051)
 
 - untuk menghentikan proses tekan ctrl + c
 
