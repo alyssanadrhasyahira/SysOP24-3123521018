@@ -69,6 +69,8 @@ l![image](https://github.com/alyssanadrhasyahira/SysOP24-3123521018/assets/16055
  ```
 ![image](https://github.com/alyssanadrhasyahira/SysOP24-3123521018/assets/160555565/6454ae23-b11a-459c-9e7c-5f519aaa457e)
   
+
+
 > fork01.ccp
 
 - Masuk ke compailer
@@ -129,7 +131,6 @@ return 0;
 ```
 $ ./[namafile].exe
  ```
-![image](https://github.com/alyssanadrhasyahira/SysOP24-3123521018/assets/160555565/5ff0cbe1-f88e-4ec5-af2d-1e44bf4592bb)
 
 - Hasil
 ![image](https://github.com/alyssanadrhasyahira/SysOP24-3123521018/assets/160555565/b4e57378-6c6a-4493-94cc-60f43e1344a8)
@@ -303,15 +304,15 @@ int main()
 /* https://www.includehelp.com/c-programs/orphan-process.aspx */
  ```
 
-![image](https://github.com/alyssanadrhasyahira/SysOP24-3123521018/assets/160555565/f9582508-7421-4776-816e-e0e0a262ae01)
+![Screenshot 2024-04-29 194207](https://github.com/alyssanadrhasyahira/SysOP24-3123521018/assets/160555565/9353d5a8-bdb4-4825-8f9e-fa4e9e0b2be0)
 
 
 - kemudian simpan file dengan crlt + x
 
-- mengubah file.cpp menjadi .exe
+- mengubah file.c menjadi .exe
 
 ```
-   $ g++ [namafile].cpp -o [namafile].exe
+   $ g++ [namafile].c -o [namafile].exe
  ```
 
 - kemudian menjalankan kode
@@ -320,7 +321,7 @@ int main()
 $ ./[namafile].exe
  ```
 
-![image](https://github.com/alyssanadrhasyahira/SysOP24-3123521018/assets/160555565/ce1da593-917c-4c91-bbfc-2d7eab471051)
+![Screenshot 2024-04-29 194408](https://github.com/alyssanadrhasyahira/SysOP24-3123521018/assets/160555565/09819c8b-03c0-4c19-9839-18a04bcd47e3)
 
 - untuk menghentikan proses tekan ctrl + c
 
@@ -329,10 +330,10 @@ $ ./[namafile].exe
 - Masuk ke compiler
   
  ```
-   $ nano [namafile].cpp
+   $ nano [namafile].c
  ```
 
-- memasukkan kode fork.2
+- memasukkan kode zombie
   
  ```
  #include <iostream>
@@ -361,11 +362,15 @@ int main(void) {
 }
  ```
 
+![Screenshot 2024-04-29 194838](https://github.com/alyssanadrhasyahira/SysOP24-3123521018/assets/160555565/e038c969-effb-4b52-a234-7d400ea0c204)
+
+
+
 - kemudian simpan file dengan crlt + x
 - mengubah file.cpp menjadi .exe
 
 ```
-   $ g++ [namafile].cpp -o [namafile].exe
+   $ g++ [namafile].c -o [namafile].exe
  ```
 
 - kemudian menjalankan kode
@@ -374,7 +379,17 @@ int main(void) {
 $ ./[namafile].exe
  ```
 
+![Screenshot 2024-04-29 200627](https://github.com/alyssanadrhasyahira/SysOP24-3123521018/assets/160555565/25dffe74-426e-47e7-b9d8-c2f1f807080a)
+
+
+
 - untuk menghentikan proses tekan ctrl + c
+
+  ## Producer-Consumer problem
+
+- Bound buffer adalah struktur data dengan kapasitas tetap yang digunakan untuk mentransfer data antara produsen dan konsumen dalam pemrograman konkuren, memastikan pengelolaan sumber daya yang efisien dan menghindari masalah sinkronisasi.
+  
+- Producer-Consumer problem melibatkan dua entitas: produsen yang menghasilkan data dan mengisi buffer, serta konsumen yang mengambil data dari buffer. Tujuannya adalah mencegah produsen mengisi buffer saat penuh dan konsumen mengambil saat kosong. Solusi biasanya menggunakan sinkronisasi untuk mengatur akses ke buffer.
 
 
 
