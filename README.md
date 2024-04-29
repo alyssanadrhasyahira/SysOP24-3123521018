@@ -10,22 +10,275 @@ Instruksi-instruksi pada arsitektur CISC dapat melibatkan beberapa operasi yang 
 ## perbedaan
 1. Jumlah instruksi
 
-    RISC memiliki jumlah instruksi yang lebih sedikit dibandingkan dengan        CISC. Ini membuat RISC lebih mudah diimplementasikan dan lebih cepat         dalam pemrosesan instruksi.
+    RISC memiliki jumlah instruksi yang lebih sedikit dibandingkan dengan        CISC.Ini membuat RISC lebih mudah diimplementasikan dan lebih cepat          dalampemrosesan instruksi.
+
+2. Kompleksitas instruksi
+
+   Instruksi dalam CISC lebih kompleks dibandingkan dengan RISC. Ini memungkinkan CISC untuk menyelesaikan tugas yang lebih kompleks dalam waktu yang lebih singkat. Namun,   kompleksitas instruksi ini juga membuat CISC membutuhkan waktu lebih lama untuk menjalankan setiap instruksi.
+
+3. Sistem pipelining
    
+    RISC menggunakan sistem pipelining, yang memungkinkan beberapa instruksi diproses secara bersamaan. Ini meningkatkan efisiensi pemrosesan instruksi dan meningkatkan kecepatan komputer secara keseluruhan. CISC juga dapat menggunakan sistem pipelining, tetapi tidak seefisien RISC.
+
+5. Perangkat keras
    
-3. Kompleksitas instruksi
- 
-  Instruksi dalam CISC lebih kompleks dibandingkan dengan RISC. Ini            memungkinkan CISC untuk menyelesaikan tugas yang lebih kompleks dalam        waktu yang lebih singkat. Namun, kompleksitas instruksi ini juga membuat     CISC membutuhkan waktu lebih lama untuk menjalankan setiap instruksi.
+    CISC membutuhkan lebih banyak perangkat keras dibandingkan dengan RISC karena kompleksitas instruksinya. Ini membuat CISC lebih mahal untuk diimplementasikan dan kurang efisien dalam hal penggunaan daya.
 
-4. Sistem pipelining
-
-    RISC menggunakan sistem pipelining, yang memungkinkan beberapa instruksi     diproses secara bersamaan. Ini meningkatkan efisiensi pemrosesan             instruksi dan meningkatkan kecepatan komputer secara keseluruhan. CISC       juga dapat menggunakan sistem pipelining, tetapi tidak seefisien RISC.
-
-4. Perangkat keras
+7. Aplikasi
    
-   CISC membutuhkan lebih banyak perangkat keras dibandingkan dengan RISC       karena kompleksitas instruksinya. Ini membuat CISC lebih mahal untuk         diimplementasikan dan kurang efisien dalam hal penggunaan daya.
+    RISC lebih cocok untuk aplikasi yang membutuhkan pemrosesan data dalam jumlah besar dalam waktu yang singkat, seperti database dan server web. Sementara itu, CISC lebih cocok untuk aplikasi yang membutuhkan pemrosesan data kompleks, seperti pengolahan gambar dan video.
 
-6. Aplikasi
+## Hubungan Arsitektur CPU dengan Arsitektur OS
 
-    RISC lebih cocok untuk aplikasi yang membutuhkan pemrosesan data dalam       jumlah besar dalam waktu yang singkat, seperti database dan server web.      Sementara itu, CISC lebih cocok untuk aplikasi yang membutuhkan              pemrosesan data kompleks, seperti pengolahan gambar dan video.
+## FORK ORPHAN dan ZOMBIE
+
+- Melakukan instalasi g++ sebelum menjalan fork, orphan dan zombie.
+
+ ```
+    $ su root
+    $ sudo apt update
+    $ sudo apt upgrade
+    $ sudo apt instal g++
+ ```
+
+- Login kembali menjadi user
+
+ ```
+   $ login [username]
+ ```
+  
+> fork.1
+
+- Masuk ke compiler
+  
+ ```
+   $ login [username]
+ ```
+
+- memasukkan kode fork.1
+  
+ ```
+   using namespace std;
+
+#include <iostream>
+#include <sys/types.h>
+#include <unistd.h>
+
+
+/* getpid() adalah system call yg dideklarasikan pada unistd.h.
+Menghasilkan suatu nilai dengan type pid_t.
+pid_t adalah type khusus untuk process id yg ekuivalen dg int
+*/
+int main(void) {
+	pid_t mypid;
+	uid_t myuid;
+	for (int i = 0; i < 3; i++) {
+		mypid = getpid();
+		cout << "I am process " << mypid << endl;
+		cout << "My parent process ID is " << getppid() << endl;
+		cout << "The owner of this process has uid " << getuid()
+	<< endl;
+/* sleep adalah system call atau fungsi library
+yang menghentikan proses ini dalam detik
+*/
+	sleep(3);
+	}
+return 0;
+}
+ ```
+
+- kemudian simpan file dengan crlt + x
+- mengubah file.cpp menjadi .exe
+
+```
+   $ g++ [namafile].cpp -o [namafile].exe
+ ```
+
+- kemudian menjalankan kode
+  
+```
+$ ./[namafile].exe
+ ```
+
+> fork 2
+- Masuk ke compiler
+  
+ ```
+   $ login [username]
+ ```
+
+- memasukkan kode fork.2
+  
+ ```
+ #include <iostream>
+#include <sys/types.h>
+#include <unistd.h>
+using namespace std;
+
+
+/* getpid() dan fork() adalah system call yg dideklarasikan
+pada unistd.h.
+Menghasilkan suatu nilai dengan type pid_t.
+pid_t adalah type khusus untuk process id yg ekuivalen dg int
+*/
+int main(void) {
+	pid_t childpid;
+	int x = 5;
+	childpid = fork();
+
+	while (1) {
+		cout << "This is process ID" << getpid() << endl;
+		cout << "In this process the value of x becomes " << x << endl;	
+		sleep(2);
+		x++;
+	}
+	return 0;
+}
+ ```
+
+- kemudian simpan file dengan crlt + x
+- mengubah file.cpp menjadi .exe
+
+```
+   $ g++ [namafile].cpp -o [namafile].exe
+ ```
+
+- kemudian menjalankan kode
+  
+```
+$ ./[namafile].exe
+ ```
+
+- untuk menghentikan proses tekan ctrl + c
+
+> Orphan
+- Masuk ke compiler
+  
+ ```
+   $ login [username]
+ ```
+
+- memasukkan kode Orphan
+  
+ ```
+ #include <stdio.h>
+#include <sys/types.h>
+#include <unistd.h>
+
+int main()
+{
+	// fork() Create a child process
+
+	int pid = fork();
+	if (pid > 0)
+	{
+		//getpid() returns process id
+		// while getppid() will return parent process id
+		printf("Parent process\n");
+		printf("ID : %d\n\n",getpid());
+	}
+	else if (pid == 0)
+	{
+		printf("Child process\n");
+		// getpid() will return process id of child process
+		printf("ID: %d\n",getpid());
+		// getppid() will return parent process id of child process
+		printf("Parent -ID: %d\n\n",getppid());
+
+		sleep(10);
+
+		// At this time parent process has finished.
+		// So if u will check parent process id 
+		// it will show different process id
+		printf("\nChild process \n");
+		printf("ID: %d\n",getpid());
+		printf("Parent -ID: %d\n",getppid());
+	}
+	else
+	{
+		printf("Failed to create child process");
+	}
+	
+	return 0;
+}
+
+/* https://www.includehelp.com/c-programs/orphan-process.aspx */
+ ```
+
+- kemudian simpan file dengan crlt + x
+- mengubah file.cpp menjadi .exe
+
+```
+   $ g++ [namafile].cpp -o [namafile].exe
+ ```
+
+- kemudian menjalankan kode
+  
+```
+$ ./[namafile].exe
+ ```
+
+- untuk menghentikan proses tekan ctrl + c
+
+> Zombie
+
+- Masuk ke compiler
+  
+ ```
+   $ login [username]
+ ```
+
+- memasukkan kode fork.2
+  
+ ```
+ #include <iostream>
+#include <sys/types.h>
+#include <unistd.h>
+using namespace std;
+
+
+/* getpid() dan fork() adalah system call yg dideklarasikan
+pada unistd.h.
+Menghasilkan suatu nilai dengan type pid_t.
+pid_t adalah type khusus untuk process id yg ekuivalen dg int
+*/
+int main(void) {
+	pid_t childpid;
+	int x = 5;
+	childpid = fork();
+
+	while (1) {
+		cout << "This is process ID" << getpid() << endl;
+		cout << "In this process the value of x becomes " << x << endl;	
+		sleep(2);
+		x++;
+	}
+	return 0;
+}
+ ```
+
+- kemudian simpan file dengan crlt + x
+- mengubah file.cpp menjadi .exe
+
+```
+   $ g++ [namafile].cpp -o [namafile].exe
+ ```
+
+- kemudian menjalankan kode
+  
+```
+$ ./[namafile].exe
+ ```
+
+- untuk menghentikan proses tekan ctrl + c
+
+
+
+
+
+
+
+  
+
+
 
