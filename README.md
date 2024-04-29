@@ -32,27 +32,42 @@ Instruksi-instruksi pada arsitektur CISC dapat melibatkan beberapa operasi yang 
 
 ## FORK ORPHAN dan ZOMBIE
 
+-clone ke repository https://github.com/ferryastika/operatingsystem.git
+
+ ```
+    $ su root
+    $ sudo apt update
+    $ sudo apt upgrade
+    $ sudo apt install g++
+ ```
+
+
 - Melakukan instalasi g++ sebelum menjalan fork, orphan dan zombie.
 
  ```
     $ su root
     $ sudo apt update
     $ sudo apt upgrade
-    $ sudo apt instal g++
+    $ sudo apt install g++
  ```
+
+l![image](https://github.com/alyssanadrhasyahira/SysOP24-3123521018/assets/160555565/f2b3ef64-b700-4160-b2b8-776a83b6e71d)
+
 
 - Login kembali menjadi user
 
  ```
    $ login [username]
  ```
+![image](https://github.com/alyssanadrhasyahira/SysOP24-3123521018/assets/160555565/6e63a294-1876-4e98-b936-32f610ec6364)
+
   
-> fork.1
+> fork01.ccp
 
 - Masuk ke compiler
   
  ```
-   $ login [username]
+   $ nano [namafile].cpp
  ```
 
 - memasukkan kode fork.1
@@ -104,7 +119,7 @@ $ ./[namafile].exe
 - Masuk ke compiler
   
  ```
-   $ login [username]
+   $ nano [namafile].cpp
  ```
 
 - memasukkan kode fork.2
@@ -155,7 +170,7 @@ $ ./[namafile].exe
 - Masuk ke compiler
   
  ```
-   $ login [username]
+   $ nano [namafile].cpp
  ```
 
 - memasukkan kode Orphan
@@ -225,7 +240,7 @@ $ ./[namafile].exe
 - Masuk ke compiler
   
  ```
-   $ login [username]
+   $ nano [namafile].cpp
  ```
 
 - memasukkan kode fork.2
