@@ -25,7 +25,7 @@ ket : mengclonning ke repository
 
 l![image](https://github.com/alyssanadrhasyahira/SysOP24-3123521018/assets/160555565/f2b3ef64-b700-4160-b2b8-776a83b6e71d)
 
-Ket : Sebelum menjalankan frok kita perlu melakukan instalasi compailer dengan cara mengetikkan apt install gcc g++. Dimana gcc untuk compiler bahasa c dan g++ untuk compiler bahasa c++
+Ket : Sebelum menjalankan frok kita perlu melakukan instalasi compailer dengan cara memasukkan perintah $ apt install gcc g++. Dimana gcc untuk compiler bahasa c dan g++ untuk compiler bahasa c++
 
 
 - Login kembali menjadi user
