@@ -1,4 +1,4 @@
-**JAWABAN NOMOR 4**
+## Instalasi package gcc, make, dan git
 
 ```sh
   $ su -l
