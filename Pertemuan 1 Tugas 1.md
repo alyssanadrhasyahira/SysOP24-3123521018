@@ -1,6 +1,6 @@
 Nama	: Alyssa Nadrha Syahira
 
-NRP	: 3123521018
+NRP	  : 3123521018
 
 Kelas	: TI – A PSDKU Lamongan
 
