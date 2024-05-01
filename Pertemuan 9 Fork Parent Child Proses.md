@@ -10,6 +10,8 @@
   
 ![image](https://github.com/alyssanadrhasyahira/SysOP24-3123521018/assets/160555565/5020504c-e560-4927-bad6-71bedaca9e5d)
 
+ket : mengclonning ke repository
+
 
 
 - Melakukan instalasi g++ sebelum menjalan fork, orphan dan zombie.
@@ -22,6 +24,8 @@
  ```
 
 l![image](https://github.com/alyssanadrhasyahira/SysOP24-3123521018/assets/160555565/f2b3ef64-b700-4160-b2b8-776a83b6e71d)
+
+Ket : Sebelum menjalankan frok kita perlu melakukan instalasi compailer dengan cara mengetikkan apt install gcc g++. Dimana gcc untuk compiler bahasa c dan g++ untuk compiler bahasa c++
 
 
 - Login kembali menjadi user
@@ -104,6 +108,8 @@ $ ./[namafile].exe
 - Hasil
 ![image](https://github.com/alyssanadrhasyahira/SysOP24-3123521018/assets/160555565/b4e57378-6c6a-4493-94cc-60f43e1344a8)
 
+Analisa :
+program tersebut menampilkan informasi bahwa proses dengan ID 2852 memiliki parent process dengan ID 2161 dan dimiliki oleh pengguna dengan UID 1000 dan melakukan perulangan sebanyak 3 kali.
   
 
 
@@ -163,6 +169,8 @@ $ ./[namafile].exe
 
 ![image](https://github.com/alyssanadrhasyahira/SysOP24-3123521018/assets/160555565/4a598364-e0df-4543-946b-7c3fd35a395e)
 
+Analisa : terlihat bahwa ada dua proses yang berjalan secara bersamaan, yaitu proses dengan ID 2248 dan proses dengan ID 2249. Pada proses pertama dengan ID 2248, nilai dari variabel x diatur menjadi 5. Pada proses kedua dengan ID 2248, nilai dari variabel x diatur menjadi 6 begitu juga dengan proses ID 2249. Pada akhirnya, terdapat dua proses yang berjalan secara bersamaan (proses ID 2248 dan proses ID 2249). Dalam kedua proses ini, nilai dari variabel x diatur menjadi 7.
+
 
 - untuk menghentikan proses tekan ctrl + c
 
@@ -213,6 +221,8 @@ int main(void) {
 $ ./[namafile].exe
  ```
 ![image](https://github.com/alyssanadrhasyahira/SysOP24-3123521018/assets/160555565/6a618897-df13-4549-9e2d-ae8f1fc4749f)
+
+Analisa : terlihat bahwa ada dua proses yang berjalan secara bergantian, yaitu proses dengan ID 2261 dan proses dengan ID 2262
 
 
 
@@ -292,6 +302,8 @@ $ ./[namafile].exe
 
 ![Screenshot 2024-04-29 194408](https://github.com/alyssanadrhasyahira/SysOP24-3123521018/assets/160555565/09819c8b-03c0-4c19-9839-18a04bcd47e3)
 
+Analisa : terlihat bahwa proses dengan ID 1139 merupakan proses yang menjadi parents dari proses dengan ID 2173.
+
 - untuk menghentikan proses tekan ctrl + c
 
 > Zombie
@@ -349,6 +361,8 @@ $ ./[namafile].exe
  ```
 
 ![Screenshot 2024-04-29 200627](https://github.com/alyssanadrhasyahira/SysOP24-3123521018/assets/160555565/25dffe74-426e-47e7-b9d8-c2f1f807080a)
+
+ket : hasil dari perintah $ ./zombie.exe
 
 
 
