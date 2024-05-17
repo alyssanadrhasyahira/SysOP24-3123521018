@@ -9,8 +9,6 @@
 
 - Contoh
   > user melakukan click pada button kemudian aplikasi menjalankan background process pada thread yang berbeda, sehingga user-interface tetap responsive. Aplikasi menjalankan dua hal berbeda, yaitu background process dan user interface, secara bersamaan.
-
-Parallel
   
  **Parallel**
 - Pengertian
@@ -19,11 +17,18 @@ Parallel
 - Contoh
   > sebuah aplikasi melakukan pengolahan 1.000.000 data. Data tersebut dibagi menjadi empat bagian, masing-masing 250.000 data, kemudian tiap bagian tersebut dieksekusi secara bersamaan pada thread yang berbeda-beda.
 
- **Parallel**
+ **pararel-concurrent**
 - Pengertian
-  > Parallel adalah beberapa proses yang dilakukan secara bersamaan Parallel  dapat melakukan sebuah proses secara bersamaan
+  > Kombinasi dari eksekusi tugas-tugas secara simultan (paralel) dan secara interleaved (konkuren).
   
 - Contoh
-  > sebuah aplikasi melakukan pengolahan 1.000.000 data. Data tersebut dibagi menjadi empat bagian, masing-masing 250.000 data, kemudian tiap bagian tersebut dieksekusi secara bersamaan pada thread yang berbeda-beda.
+  > Menangani Permintaan Klien:
+Paralel: Server web mampu melayani banyak permintaan dari klien secara bersamaan. Setiap permintaan klien yang diterima oleh server dapat ditangani dalam thread terpisah.
+
+Konkuren: Dalam setiap thread, beberapa langkah dapat dilakukan secara konkuren, seperti membaca permintaan, memprosesnya, dan mengirimkan respons kembali ke klien.
+
+
+## Perbedaan pararel concurrent dan pararel-concurrent
+
   
 
