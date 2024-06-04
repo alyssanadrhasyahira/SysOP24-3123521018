@@ -9,9 +9,13 @@ writer menunggu (reader memiliki prioritas lebih tinggi disbanding dengan writer
 b. Jika ada writer yang sedang menunggu, maka tidak boleh ada reader lain yang
 bekerja (writer memiliki prioritas yang lebih tinggi)
 Jika terdapat writer dalam critical section dan terdapat n reader yang
-menunggu, maka satu reader akan antri di wrt dan n-1 reader akan antri di mutex.
+menunggu, maka satu reader akan menunggu wrt dan n-1 reader akan antri di mutex.
 Jika writer mengeksekusi signal(wrt), maka dapat disimpulkan bahwa eksekusi
 adalah menunggu reader atau menunggu satu writer. 
+
+![Screenshot 2024-06-04 094217](https://github.com/alyssanadrhasyahira/SysOP24-3123521018/assets/160555565/33e4b594-fe3a-4be5-b8b3-55aaf23dfa6f)
+
+
 
 ## producer-consumer problem 
 
