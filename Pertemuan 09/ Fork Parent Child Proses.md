@@ -94,7 +94,7 @@ return 0;
 - mengompilasi fork01.cpp menjadi fork01 menggunakan g++
   
   ```
-  $ g++ fork01.cpp -o fork01.
+  $ g++ fork01.cpp -o fork01
   ```
 - kemudian menjalankan kode
   
