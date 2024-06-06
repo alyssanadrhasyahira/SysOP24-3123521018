@@ -90,26 +90,26 @@ return 0;
 ![image](https://github.com/alyssanadrhasyahira/SysOP24-3123521018/assets/160555565/17f2ea71-123f-4fb2-ac68-9ea843669864)
 
 - kemudian simpan file dengan crlt + x
-
-- mengubah file.cpp menjadi .exe
-
-```
-   $ g++ [namafile].cpp -o [namafile].exe
- ```
-![image](https://github.com/alyssanadrhasyahira/SysOP24-3123521018/assets/160555565/345612fd-e454-4ba8-b870-9d6a426bbb00)
-
-
+  
+- mengompilasi fork01.cpp menjadi fork01 menggunakan g++
+  
+  ```
+  $ g++ fork01.cpp -o fork01.
+  ```
 - kemudian menjalankan kode
   
 ```
-$ ./[namafile].exe
+$ ./[namafile]
  ```
 
 - Hasil
-![image](https://github.com/alyssanadrhasyahira/SysOP24-3123521018/assets/160555565/b4e57378-6c6a-4493-94cc-60f43e1344a8)
+
+  ![image](https://github.com/alyssanadrhasyahira/SysOP24-3123521018/assets/160555565/b2032548-ca22-4c48-900c-23fa013c7039)
+
+
 
 Analisa :
-program tersebut menampilkan informasi bahwa proses dengan ID 2852 memiliki parent process dengan ID 2161 dan dimiliki oleh pengguna dengan UID 1000 dan melakukan perulangan sebanyak 3 kali.
+program tersebut menampilkan informasi bahwa proses dengan ID 2245 memiliki parent process dengan ID 2209 dan dimiliki oleh pengguna dengan UID 1000 dan melakukan perulangan sebanyak 3 kali.
   
 
 
@@ -155,21 +155,22 @@ int main(void) {
 
 
 - kemudian simpan file dengan crlt + x
-- mengubah file.cpp menjadi .exe
-
-```
-   $ g++ [namafile].cpp -o [namafile].exe
- ```
-
+- mengompilasi fork01.cpp menjadi fork01 menggunakan g++
+  
+  ```
+  $ g++ fork02.cpp -o fork02
+  ```
 - kemudian menjalankan kode
   
 ```
-$ ./[namafile].exe
+$ ./[namafile]
  ```
+![image](https://github.com/alyssanadrhasyahira/SysOP24-3123521018/assets/160555565/43f81027-b0a8-42d3-9abb-536915577f65)
 
-![image](https://github.com/alyssanadrhasyahira/SysOP24-3123521018/assets/160555565/4a598364-e0df-4543-946b-7c3fd35a395e)
 
-Analisa : terlihat bahwa ada dua proses yang berjalan secara bersamaan, yaitu proses dengan ID 2248 dan proses dengan ID 2249. Pada proses pertama dengan ID 2248, nilai dari variabel x diatur menjadi 5. Pada proses kedua dengan ID 2248, nilai dari variabel x diatur menjadi 6 begitu juga dengan proses ID 2249. Pada akhirnya, terdapat dua proses yang berjalan secara bersamaan (proses ID 2248 dan proses ID 2249). Dalam kedua proses ini, nilai dari variabel x diatur menjadi 7.
+
+
+Analisa : terlihat bahwa ada dua proses yang berjalan secara bersamaan, yaitu proses dengan ID 2254 dan proses dengan ID 2255. Pada proses pertama dengan ID 2254, nilai dari variabel x diatur menjadi 5. Pada proses kedua dengan ID 2254, nilai dari variabel x diatur menjadi 6 begitu juga dengan proses ID 2255. Pada akhirnya, terdapat dua proses yang berjalan secara bersamaan (proses ID 2254dan proses ID 2255). Dalam kedua proses ini, nilai dari variabel x diatur menjadi 7 dst.
 
 
 - untuk menghentikan proses tekan ctrl + c
@@ -209,20 +210,21 @@ int main(void) {
 ![image](https://github.com/alyssanadrhasyahira/SysOP24-3123521018/assets/160555565/810acf5b-6c39-421e-8c01-4de755ed9ed6)
 
 - kemudian simpan file dengan crlt + x
-- mengubah file.cpp menjadi .exe
-
-```
-   $ g++ [namafile].cpp -o [namafile].exe
- ```
-
+- mengompilasi fork01.cpp menjadi fork01 menggunakan g++
+  
+  ```
+  $ g++ fork03.cpp -o fork03
+  ```
 - kemudian menjalankan kode
   
 ```
-$ ./[namafile].exe
+$ ./[namafile]
  ```
-![image](https://github.com/alyssanadrhasyahira/SysOP24-3123521018/assets/160555565/6a618897-df13-4549-9e2d-ae8f1fc4749f)
 
-Analisa : terlihat bahwa ada dua proses yang berjalan secara bergantian, yaitu proses dengan ID 2261 dan proses dengan ID 2262
+![image](https://github.com/alyssanadrhasyahira/SysOP24-3123521018/assets/160555565/77c100e0-5e88-4f8a-83b4-098047daf659)
+
+
+Analisa : terlihat bahwa ada dua proses yang berjalan secara bergantian, yaitu proses dengan ID 2264 dan proses dengan ID 2265
 
 
 
@@ -288,21 +290,16 @@ int main()
 
 - kemudian simpan file dengan crlt + x
 
-- mengubah file.c menjadi .exe
+- Ubah orphan.c menjadi orphan menggunakan compiler gcc
+  ```
+  $ gcc orphan.c -o orphan
+  ```
+- Jalankan kode dengan menggunakan perintah ./orphan
 
-```
-   $ g++ [namafile].c -o [namafile].exe
- ```
+![image](https://github.com/alyssanadrhasyahira/SysOP24-3123521018/assets/160555565/fd032f57-1ebd-4cef-bcf5-31e7bb7daddc)
 
-- kemudian menjalankan kode
-  
-```
-$ ./[namafile].exe
- ```
 
-![Screenshot 2024-04-29 194408](https://github.com/alyssanadrhasyahira/SysOP24-3123521018/assets/160555565/09819c8b-03c0-4c19-9839-18a04bcd47e3)
-
-Analisa : terlihat bahwa proses dengan ID 1139 merupakan proses yang menjadi parents dari proses dengan ID 2173.
+Analisa : terlihat bahwa proses dengan ID 2274 merupakan proses yang menjadi parents dari proses dengan ID 2173.
 
 - untuk menghentikan proses tekan ctrl + c
 
@@ -348,21 +345,17 @@ int main(void) {
 
 
 - kemudian simpan file dengan crlt + x
-- mengubah file.cpp menjadi .exe
-
-```
-   $ g++ [namafile].c -o [namafile].exe
- ```
-
-- kemudian menjalankan kode
+- Ubah zombie.c menjadi zombie menggunakan compiler gcc
+  ```
+  $ gcc zombie.c -o zombie
+  ```
+- Jalankan kode dengan menggunakan perintah ./zombie
   
-```
-$ ./[namafile].exe
- ```
 
-![Screenshot 2024-04-29 200627](https://github.com/alyssanadrhasyahira/SysOP24-3123521018/assets/160555565/25dffe74-426e-47e7-b9d8-c2f1f807080a)
+![image](https://github.com/alyssanadrhasyahira/SysOP24-3123521018/assets/160555565/07639e22-31f8-4c28-9d36-1b95d97a3389)
 
-ket : hasil dari perintah $ ./zombie.exe
+
+ket : hasil dari perintah $ ./zombie
 
 
 
